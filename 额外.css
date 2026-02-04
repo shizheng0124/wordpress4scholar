@@ -1,0 +1,128 @@
+/*
+Theme Name: Twenty Twenty-Four
+Theme URI: https://wordpress.org/themes/twentytwentyfour/
+Author: the WordPress team
+Author URI: https://wordpress.org
+Description: Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
+Requires at least: 6.4
+Tested up to: 6.9
+Requires PHP: 7.0
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentyfour
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+*/
+/* 1. 基础排版优化：设定舒适的行高与字体 */
+body {
+    line-height: 1.75; /* 增加行间距，减少视觉拥挤 */
+    color: #374151;    /* 使用深灰色代替纯黑，减少视觉疲劳 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    max-width: 100%;
+    padding: 15px;
+}
+/* 当屏幕宽度大于 1024px（电脑端）时生效 */
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px; /* 电脑端宽屏显示 */
+        margin: 0 auto;
+        padding: 40px;
+    }
+}
+/* 2. 标题颜色与间距：增强层次感 */
+h1, h2, h3 {
+    color: #111827;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+h1 { border-bottom: 2px solid #3b82f6; padding-bottom: 10px; color: #1e40af; }
+h2 { color: #2563eb; border-left: 4px solid #2563eb; padding-left: 15px; }
+
+/* 3. 代码块优化：让终端命令更清晰 */
+pre.wp-block-code {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    overflow-x: auto;
+    font-family: "Fira Code", "Cascadia Code", Monaco, Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1f2937;
+}
+
+/* 4. 列表与引用：增加间距 */
+ul, ol {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em; /* 列表项之间的微调 */
+}
+
+blockquote {
+    border-left: 4px solid #10b981;
+    background-color: #ecfdf5;
+    margin: 1.5em 0;
+    padding: 1rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+/* 5. 表格美化 */
+.wp-block-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+}
+
+.wp-block-table th, .wp-block-table td {
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+    text-align: left;
+}
+
+.wp-block-table thead {
+    background-color: #f3f4f6;
+    font-weight: bold;
+}
+
+/* 6. 链接美化 */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* 7. 分割线样式 */
+hr.wp-block-separator {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 2em 0;
+}
+
+/* 子页面内容宽度调整 - 覆盖 constrained 限制 */
+main .wp-block-group,
+main .wp-block-post-content {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* 确保主内容区域全宽 */
+@media (min-width: 1024px) {
+    main {
+        max-width: 100% !important;
+    }
+    
+    .wp-site-blocks main {
+        max-width: 100% !important;
+    }
+}
